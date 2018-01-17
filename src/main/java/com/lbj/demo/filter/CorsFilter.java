@@ -25,7 +25,8 @@ public class CorsFilter implements Filter {
         response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE,PUT");
         response.setHeader("Access-Control-Allow-Headers","Authorization,Origin,X-Requested-With,X-File-Name,Content-Type, Accept");
         System.out.println("*********************************过滤器被使用**************************");  
-        chain.doFilter(req, res);  
+        chain.doFilter(req, res);
+
     }  
     public void init(FilterConfig filterConfig) {}  
     public void destroy() {}  
