@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/vue.js"></script>
+    <script src="../static/axios.js"></script>
+    <script src="../static/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <form @submit.prevent="submit">
+    <div class="field">
+        姓名：
+        <input type="text"
+               v-model="user.username">
+    </div>
+
+
+    <div class="field">
+        密码：
+        <input type="text"
+               v-model="user.password">
+    </div>
+
+
+    <input type="submit"
+           value="提交">
+</form>
+</body>
+<script>
+    $.getJSON("http://localhost:8080/getUser",function(data){
+        $.each(data.biglst,function(key,value){
+
+        })
+    });
+</script>
+</html>
